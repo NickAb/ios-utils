@@ -15,6 +15,8 @@
 		F7AB4C3D229BFBFC007DBA95 /* Cli.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB4C38229BFBFC007DBA95 /* Cli.swift */; };
 		F7AB4C41229C0B33007DBA95 /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB4C40229C0B33007DBA95 /* HelpCommand.swift */; };
 		F7AB4C43229C0C19007DBA95 /* CliError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB4C42229C0C19007DBA95 /* CliError.swift */; };
+		F7AB4C45229C0FF0007DBA95 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB4C44229C0FF0007DBA95 /* Media.swift */; };
+		F7AB4C47229C0FF8007DBA95 /* MediaCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB4C46229C0FF8007DBA95 /* MediaCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		F7AB4C38229BFBFC007DBA95 /* Cli.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cli.swift; sourceTree = "<group>"; };
 		F7AB4C40229C0B33007DBA95 /* HelpCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
 		F7AB4C42229C0C19007DBA95 /* CliError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CliError.swift; sourceTree = "<group>"; };
+		F7AB4C44229C0FF0007DBA95 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		F7AB4C46229C0FF8007DBA95 /* MediaCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCommand.swift; sourceTree = "<group>"; };
+		F7AB4C48229C1020007DBA95 /* ios-utils.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-utils.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 		F7AB4C14229BED0D007DBA95 /* ios-utils */ = {
 			isa = PBXGroup;
 			children = (
+				F7AB4C48229C1020007DBA95 /* ios-utils.entitlements */,
 				F7AB4C35229BFBFC007DBA95 /* Cli */,
 				F7AB4C31229BFBFB007DBA95 /* Commands */,
 				F7AB4C33229BFBFC007DBA95 /* Core */,
@@ -74,6 +80,7 @@
 		F7AB4C31229BFBFB007DBA95 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
+				F7AB4C46229C0FF8007DBA95 /* MediaCommand.swift */,
 				F7AB4C40229C0B33007DBA95 /* HelpCommand.swift */,
 			);
 			path = Commands;
@@ -82,6 +89,7 @@
 		F7AB4C33229BFBFC007DBA95 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F7AB4C44229C0FF0007DBA95 /* Media.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -129,6 +137,11 @@
 				TargetAttributes = {
 					F7AB4C11229BED0D007DBA95 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -169,7 +182,9 @@
 			files = (
 				F7AB4C41229C0B33007DBA95 /* HelpCommand.swift in Sources */,
 				F7AB4C3C229BFBFC007DBA95 /* CommandGroup.swift in Sources */,
+				F7AB4C45229C0FF0007DBA95 /* Media.swift in Sources */,
 				F7AB4C3D229BFBFC007DBA95 /* Cli.swift in Sources */,
+				F7AB4C47229C0FF8007DBA95 /* MediaCommand.swift in Sources */,
 				F7AB4C28229BEDF0007DBA95 /* main.swift in Sources */,
 				F7AB4C43229C0C19007DBA95 /* CliError.swift in Sources */,
 				F7AB4C3B229BFBFC007DBA95 /* Command.swift in Sources */,
@@ -299,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ios-utils/ios-utils.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -319,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ios-utils/ios-utils.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";

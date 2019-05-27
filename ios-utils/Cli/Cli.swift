@@ -16,6 +16,12 @@ extension Encodable {
 final class Cli {
     let commands = CommandGroup(command: "", shortDescription: "", subCommands:
         [
+            CommandGroup(command: "media", shortDescription: "", subCommands:
+                [
+                    ListMediaCommand(),
+                    DeleteMediaCommand(),
+                ]
+            ),
             HelpCommand()
         ]
     )
@@ -27,10 +33,10 @@ final class Cli {
             for result in results {
                 let data = result.toJSONData()
                 let json = String(data: data ?? Data(), encoding: .utf8)
-                
+            
                 print(json!)
             }
-            
+
             exit(0)
         }
         catch let error as CliError {
