@@ -22,6 +22,12 @@ final class Cli {
                     DeleteMediaCommand(),
                 ]
             ),
+            CommandGroup(command: "pasteboard", shortDescription: "", subCommands:
+                [
+                    ListPasteboardCommand(),
+                    DeletePasteboardCommand(),
+                ]
+            ),
             HelpCommand()
         ]
     )

@@ -1,6 +1,6 @@
 # ios-utils
 
-Command-line utils for iOS simulators. Use in automated tests to list or delete media assets from a simulator.
+Command-line utils for iOS simulators. Use in automated tests to list or delete media assets and/or pasteboard items from a simulator.
 
 
 ## Quickstart
@@ -29,6 +29,9 @@ Subcommands:
     media <subcommand>         
         list                   List media assets
         delete                 Delete all media assets
+    pasteboard <subcommand>    
+        list                   List string and url pasteboard items
+        delete                 Clear pasteboard
     help                       Print usage
 ```
 

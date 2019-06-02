@@ -16,7 +16,9 @@
 		F7AB4C41229C0B33007DBA95 /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB4C40229C0B33007DBA95 /* HelpCommand.swift */; };
 		F7AB4C43229C0C19007DBA95 /* CliError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB4C42229C0C19007DBA95 /* CliError.swift */; };
 		F7AB4C45229C0FF0007DBA95 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB4C44229C0FF0007DBA95 /* Media.swift */; };
-		F7AB4C47229C0FF8007DBA95 /* MediaCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB4C46229C0FF8007DBA95 /* MediaCommand.swift */; };
+		F7AB4C47229C0FF8007DBA95 /* PasteboardCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB4C46229C0FF8007DBA95 /* PasteboardCommand.swift */; };
+		F7EAC9D1229C2C950000973F /* Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EAC9D0229C2C950000973F /* Pasteboard.swift */; };
+		F7EAC9D3229C2EFF0000973F /* MediaCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EAC9D2229C2EFF0000973F /* MediaCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +33,10 @@
 		F7AB4C40229C0B33007DBA95 /* HelpCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
 		F7AB4C42229C0C19007DBA95 /* CliError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CliError.swift; sourceTree = "<group>"; };
 		F7AB4C44229C0FF0007DBA95 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
-		F7AB4C46229C0FF8007DBA95 /* MediaCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCommand.swift; sourceTree = "<group>"; };
+		F7AB4C46229C0FF8007DBA95 /* PasteboardCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCommand.swift; sourceTree = "<group>"; };
 		F7AB4C48229C1020007DBA95 /* ios-utils.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-utils.entitlements"; sourceTree = "<group>"; };
+		F7EAC9D0229C2C950000973F /* Pasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pasteboard.swift; sourceTree = "<group>"; };
+		F7EAC9D2229C2EFF0000973F /* MediaCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,8 @@
 		F7AB4C31229BFBFB007DBA95 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
-				F7AB4C46229C0FF8007DBA95 /* MediaCommand.swift */,
+				F7EAC9D2229C2EFF0000973F /* MediaCommand.swift */,
+				F7AB4C46229C0FF8007DBA95 /* PasteboardCommand.swift */,
 				F7AB4C40229C0B33007DBA95 /* HelpCommand.swift */,
 			);
 			path = Commands;
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F7AB4C44229C0FF0007DBA95 /* Media.swift */,
+				F7EAC9D0229C2C950000973F /* Pasteboard.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -180,11 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7EAC9D3229C2EFF0000973F /* MediaCommand.swift in Sources */,
 				F7AB4C41229C0B33007DBA95 /* HelpCommand.swift in Sources */,
 				F7AB4C3C229BFBFC007DBA95 /* CommandGroup.swift in Sources */,
 				F7AB4C45229C0FF0007DBA95 /* Media.swift in Sources */,
 				F7AB4C3D229BFBFC007DBA95 /* Cli.swift in Sources */,
-				F7AB4C47229C0FF8007DBA95 /* MediaCommand.swift in Sources */,
+				F7AB4C47229C0FF8007DBA95 /* PasteboardCommand.swift in Sources */,
+				F7EAC9D1229C2C950000973F /* Pasteboard.swift in Sources */,
 				F7AB4C28229BEDF0007DBA95 /* main.swift in Sources */,
 				F7AB4C43229C0C19007DBA95 /* CliError.swift in Sources */,
 				F7AB4C3B229BFBFC007DBA95 /* Command.swift in Sources */,
