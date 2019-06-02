@@ -59,13 +59,13 @@ final class Cli {
     private func printCommandUsage(command: Command, indentation: Int) {
         let indent = String(repeating: " ", count: indentation)
         let cmd = (command is CommandGroup) ? "\(command.command) <subcommand>" : command.command
-        let action = "\(indent)\(cmd)".padding(toLength: 24, withPad: " ", startingAt: 0)
+        let action = "\(indent)\(cmd)".padding(toLength: 30, withPad: " ", startingAt: 0)
         
         print("\(action) \(command.shortDescription)")
         
         if (command is CommandGroup) {
             for subCommand in (command as! CommandGroup).subCommands {
-                printCommandUsage(command: subCommand, indentation: indentation + command.command.count + 1)
+                printCommandUsage(command: subCommand, indentation: indentation + 4)
             }
         } else {
             

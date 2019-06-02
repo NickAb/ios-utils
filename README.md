@@ -26,10 +26,10 @@ Command-line utils for iOS simulators. Use in automated tests to list or delete 
 Usage: xcrun simctl spawn booted <subcommand> ...
 
 Subcommands:
-    media <subcommand>   
-          list           List media assets
-          delete         Delete all media assets
-    help                 Print usage
+    media <subcommand>         
+        list                   List media assets
+        delete                 Delete all media assets
+    help                       Print usage
 ```
 
 ## License
